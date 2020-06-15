@@ -1,0 +1,232 @@
+\documentclass[a4paper]{scrartcl}
+
+% makes 68 colors available
+\usepackage[usenames,dvipsnames]{xcolor}
+
+\usepackage[latin1]{inputenc}
+
+% sets english to the first language and german to the second laguage
+\usepackage[ngerman,english]{babel}
+
+% verbatim package to use block comments
+\usepackage{verbatim}
+
+% graphicx package to include graphics
+\usepackage{graphicx}
+\graphicspath{ {./graphics/} }
+
+% Force LaTeX to use in the whole document the
+% standard Computer modern font (if no other font is specified).
+% This is done to prevent loaded fonts to overwrite the standard font.
+\renewcommand*\rmdefault{cmr}
+\renewcommand*\sfdefault{cmss}
+\renewcommand*\ttdefault{cmtt}
+
+% include more packages here
+\usepackage{amsmath}
+
+
+% placeins package to use the \FloatBarrier command
+\usepackage[section]{placeins}
+
+
+% listings package for including source code
+\usepackage{listings}
+
+% insert style definitions here
+% a style for Matlab
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{matlabgreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{matlablila}{RGB}{170,55,241}
+
+\lstdefinestyle{MyMatStyle}{
+language = Matlab,
+%basicstyle=\color{red},
+basicstyle=\fontfamily{cmtt}\selectfont,
+breaklines=true,%
+morekeywords={matlab2tikz},
+keywordstyle=\color{blue},%
+morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+identifierstyle=\color{black},%
+stringstyle=\color{matlablila},
+commentstyle=\color{matlabgreen},%
+showstringspaces=false,
+numbers=none,%
+numberstyle={\tiny \color{black}},% size of the numbers
+numbersep=9pt, % this defines how far the numbers are from the text
+%some words to emphasise
+emph=[1]{for,end,break},emphstyle=[1]\color{red},
+%emph=[2]{word1,word2}, emphstyle=[2]{style},
+columns = fullflexible
+}
+
+
+% my own command for making comments in a LaTex project
+\newcommand{\tp}[1]{\textcolor{green}{TP: "#1"}}
+
+% define new commands here
+\newcommand{\matinl}[1]{
+\lstinline[style=MyMatStyle,keywordstyle=\color{black},
+stringstyle=keywordstyle=\color{black},commentstyle=\color{black},
+numberstyle=\color{black}]{#1}
+}
+
+
+\begin{document}
+
+% sets the indent of the first line to 0 cm
+\setlength{\parindent}{0pt}
+\title{HLCV Exercise 2}
+
+
+\maketitle
+\section*{Question 3d}
+For the graffity image, both dxdy-hist and rg-hist give good results. Most of the found matchings are correct. 
+
+We see, that for the correspondencies of the New-York image, MagLap-hist performs much better then dxdy-hist. This is because the Laplacian and the Gradient Magnitude of a function are invariant under rotations, while the gradient is not. Although, not every found match is right.
+
+Additionally, I found that both Hessian and Harris detectors work equally well.
+\section*{Question 4a}
+Homography estimation has the general purpose of finding a $3 \times 
+3$-projection matrix for a projective mapping between two images in homogenous 
+coordinates. Since the scale factor of our matrix is set to 1 we have to 
+estimate 8 unknown parameters:
+\begin{equation*}
+\begin{pmatrix}
+h_{11} & h_{12} & h_{13}\\
+h_{21} & h_{22} & h_{23}\\
+h_{31} & h_{32} & 1\\
+\end{pmatrix}
+\end{equation*}
+The naive idea is to set a system of equations using point matches between 
+$(x_i,y_i), (x_i',y_i')$ which would look like this
+\begin{equation*}
+\begin{pmatrix}
+x_i & y_i & 0 & 0 & 0 & 0 & 1 & 0 & 0\\
+0 & 0 & x_i & y_i & 0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & x_i & y_i & 0 & 0 & 1\\
+\end{pmatrix}
+\begin{pmatrix}
+h_{11}\\
+h_{12}\\
+h_{21}\\
+h_{22}\\
+h_{31}\\
+h_{32}\\
+h_{13}\\
+h_{23}\\
+1
+\end{pmatrix}
+=
+\begin{pmatrix}
+x_i'\\[3pt]
+y_i'\\[3pt]
+1
+\end{pmatrix}
+\end{equation*}
+$\Rightarrow$ we get 3 equations for our 8 unknowns from one point match.\\
+If we extend the system with a sufficient number of points matches it becomes 
+overspecified so we cannot solve it directly. So the idea would be using a 
+least-squares fit.\\
+The problem now is that wrong point matches (outliers) can totally spoil the 
+estimation of our parameters since the least-squares fit tries 
+to approximate all our point matches and punishes distance quadratically.\\
+To overcome this drawback we use the RANSAC algorithm: The key idea is to 
+select $n$ random points and rate whether we found a set of ``inliers''. In 
+order to do this we compute the homography matrix approximating our selected 
+points using a least-squares fit then we have a tolerance region around our 
+fit. All the points inside that tolerance are counted as inliers. We repeat the 
+previous step $k$ times and select the best point set with respect to the 
+number of inliers it contains.\\
+Now to provide an estimate how many times we have to sample (paramter $k$) to 
+find a set of inliers given a failure probability $p$ we can view the process 
+as an Bernoulli process:\\
+$w$ is the probability to get an inlier\\
+$n$ is the sample size = length of the Bernoulli process\\
+$k$ is the number of samples = number of Bernoulli processes\\
+Given this it is easy to see that the probability that all samples fail is
+\begin{equation*}
+p = (1 - w^n)^k
+\end{equation*}
+We use this formula to adapt $k$.
+\bigskip
+
+
+Now we can take a look how this is happening in the code:
+The \matinl{get_ransac_hom} function takes two lists of point coordinates 
+\matinl{x1,y1,x2,y2} and two images \matinl{img1,img2} and retuns our 
+projection matrix \matinl{H}.\\
+In the code segment
+\begin{lstlisting}[style=MyMatStyle,float=!h]
+sample_size = size(x1,1); % we have sample_size samples
+pFail = 0.001; % we want to be 99.9 percent sure
+pInlier = 4 / sample_size; % just a very conservative guess for the amount of inlier (only 4);
+\end{lstlisting}
+\FloatBarrier
+we set our important parameters w to $4/\text{sample size}$ and p to $0.1\%$.\\
+We convert then our Cartesian coordinates to homogenous coordinates before we 
+start with our RANSAC iterations.\\
+In the present implementation we have a sample 4 random point matches and 
+calculate their matrix \matinl{H} using
+\begin{lstlisting}[style=MyMatStyle,float=!h]
+pos = uint32 (rand(4,1)' .* [sample_size-1, sample_size-1, sample_size-1, sample_size-1] + [1,1,1,1]);
+testH = get_hom( x1(pos), y1(pos), x2(pos), y2(pos) );
+\end{lstlisting}
+\FloatBarrier
+We use then the matrix H and count the number of inlier within our given 
+tolerance as explained above.\\
+A slight modification is that we readjust the number of tests that we perform by
+\begin{lstlisting}[style=MyMatStyle,float=!h]
+      % adjust maximal iterations to be made
+      % you can reestimate the probability for picking a true pair by
+      % looking at the percentage of inliers of the current estimation
+      pCurrentInlier = inlierCount / sample_size;
+
+      if ( pCurrentInlier > pBestInlier)
+
+        % find the amount of times k we have to draw a sample without outliers
+        kTests = log(pFail) / log(1 - pCurrentInlier^4);
+        toDoTests = round(kTests);
+
+        fprintf('proportion of inliers: %f, number of RANSAC interations: %d\n', pCurrentInlier, toDoTests);
+
+        % best Homography and amount of inliers
+        H = testH;
+        pBestInlier = pCurrentInlier;
+      end
+
+      if (toDoTests < j ) 
+          break; % end here, we are pFail percent sure to have found H
+      end
+\end{lstlisting}
+\FloatBarrier
+In the end we collect all our inlier within the tolerance of our best chosen 
+point match set and recalculate the \matinl{H} matrix using them:
+\begin{lstlisting}[style=MyMatStyle,float=!h]
+% probability of picking an inlier from the parameter set
+   pInlier = pBestInlier; 
+     
+   % first find the inliers
+   hitId = zeros(sample_size,1);
+   for i = 1:sample_size
+     p = H * [x1(i), y1(i), 1.0]';
+     p = p / p(3);
+     if (norm (p(1:2) - [x2(i),y2(i)]') < distInlier)
+       hitId(i) = i;
+     end
+   end
+   hitId = find (hitId);
+
+   % re-estimate Homography
+   H = get_hom( x1(hitId), y1(hitId), x2(hitId), y2(hitId) );
+\end{lstlisting}
+\FloatBarrier
+The division by the last component \matinl{p = p / p(3);} has to be made because
+we want to normalize our homogenous coordinates such that they have all scaling 
+factor 1. Only then points can be compared among eachother.
+
+     
+
+
+
+\end{document}

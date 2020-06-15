@@ -1,0 +1,57 @@
+[General]
+bibliographyBackendAutoDetected=
+bibliographyBackendUserOverride=
+def_graphic_ext=png
+img_extIsRegExp=false
+img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
+kile_livePreviewEnabled=true
+kile_livePreviewStatusUserSpecified=false
+kile_livePreviewTool=LivePreview-PDFLaTeX
+kileprversion=2
+kileversion=2.9.60
+lastDocument=
+masterDocument=
+name=hlcvex2
+pkg_extIsRegExp=false
+pkg_extensions=.cls .sty .bbx .cbx .lbx
+src_extIsRegExp=false
+src_extensions=.tex .ltx .latex .dtx .ins
+
+[Tools]
+MakeIndex=
+QuickBuild=
+
+[document-settings,item:hlcvex2]
+Bookmarks=
+Encoding=System
+FoldedColumns=
+FoldedLines=
+Highlighting=LaTeX
+Indentation Mode=normal
+Mode=LaTeX
+
+[item:hlcvex2]
+archive=true
+column=0
+encoding=System
+highlight=LaTeX
+line=0
+mode=LaTeX
+open=false
+order=-1
+
+[item:hlcvex2.kilepr]
+archive=true
+column=1
+encoding=
+highlight=
+line=0
+mode=
+open=false
+order=-1
+
+[view-settings,view=0,item:hlcvex2]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=

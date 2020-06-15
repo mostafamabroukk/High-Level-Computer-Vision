@@ -1,0 +1,101 @@
+\documentclass[a4paper]{scrartcl}
+
+% makes 68 colors available
+\usepackage[usenames,dvipsnames]{xcolor}
+
+\usepackage[latin1]{inputenc}
+
+% sets english to the first language and german to the second laguage
+\usepackage[ngerman,english]{babel}
+
+% verbatim package to use block comments
+\usepackage{verbatim}
+
+% graphicx package to include graphics
+\usepackage{graphicx}
+\graphicspath{ {./graphics/} }
+
+% Force LaTeX to use in the whole document the
+% standard Computer modern font (if no other font is specified).
+% This is done to prevent loaded fonts to overwrite the standard font.
+\renewcommand*\rmdefault{cmr}
+\renewcommand*\sfdefault{cmss}
+\renewcommand*\ttdefault{cmtt}
+
+% include more packages here
+\usepackage{amsmath}
+
+
+% placeins package to use the \FloatBarrier command
+\usepackage[section]{placeins}
+
+% my own command for making comments in a LaTex project
+\newcommand{\tp}[1]{\textcolor{green}{TP: "#1"}}
+
+% define new commands here
+\begin{document}
+
+% sets the indent of the first line to 0 cm
+\setlength{\parindent}{0pt}
+\title{HLCV Exercise 2}
+
+
+\maketitle
+
+
+\section{Question 4a}
+Homography estimation has the general purpose of finding a $3 \times 
+3$-projection matrix for a projective mapping between two images in homogenous 
+coordinates. Since the scale factor of our matrix is set to 1 we have to 
+estimate 8 unknown parameters:
+\begin{equation*}
+\begin{pmatrix}
+h_{11} & h_{12} & h_{13}\\
+h_{21} & h_{22} & h_{23}\\
+h_{31} & h_{32} & 1\\
+\end{pmatrix}
+\end{equation*}
+The naive idea is to set a system of equations using point matches between 
+$(x_i,y_i), (x_i',y_i')$ which would look like this
+\begin{equation*}
+\begin{pmatrix}
+x_i & y_i & 0 & 0 & 0 & 0 & 1 & 0 & 0\\
+0 & 0 & x_i & y_i & 0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & x_i & y_i & 0 & 0 & 1\\
+\end{pmatrix}
+\begin{pmatrix}
+h_{11}\\
+h_{12}\\
+h_{21}\\
+h_{22}\\
+h_{31}\\
+h_{32}\\
+h_{13}\\
+h_{23}\\
+1
+\end{pmatrix}
+=
+\begin{pmatrix}
+x_i'\\[3pt]
+y_i'\\[3pt]
+1
+\end{pmatrix}
+\end{equation*}
+$\Rightarrow 3$ we get equations for our 8 unknowns from one point match.\\
+If we extend the system with a sufficient number of points matches it becomes 
+overspecified so we cannot solve it directly. So the idea would be using a 
+least-squares fit.\\
+The problem now is that wrong point matches (outliers) can totally spoil the 
+estimation of our parameters since the least-squares fit tries 
+to approximate all our point matches and punishes distance quadratically.\\
+To overcome this drawback we use the RANSAC algorithm: The key idea is to 
+select $n$ random points and rate whether we found a set of ``inliers''. In 
+order to do this we compute the homography matrix approximating our selected 
+points using a least-squares fit then we have a tolerance region around our 
+fit. All the points inside that tolerance are counted as inliers. We repeat the 
+previous step $k$ times and select the best point set with respect to the 
+number of inliers it contains.
+
+
+
+\end{document}
