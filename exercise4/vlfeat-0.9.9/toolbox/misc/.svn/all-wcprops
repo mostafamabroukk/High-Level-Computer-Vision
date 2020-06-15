@@ -1,0 +1,275 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc
+END
+vl_simdctrl.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_simdctrl.m
+END
+vl_ihashsum.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_ihashsum.m
+END
+vl_inthist.m
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_inthist.m
+END
+vl_homkermap.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_homkermap.m
+END
+vl_binsearch.c
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_binsearch.c
+END
+vl_version.m
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_version.m
+END
+vl_localmax.c
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_localmax.c
+END
+vl_twister.c
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_twister.c
+END
+vl_numder.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_numder.m
+END
+vl_kdtreequery.c
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_kdtreequery.c
+END
+vl_xmkdir.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_xmkdir.m
+END
+vl_binsearch.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_binsearch.m
+END
+vl_localmax.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_localmax.m
+END
+vl_twister.m
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_twister.m
+END
+vl_whistc.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_whistc.m
+END
+vl_colsubset.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_colsubset.m
+END
+vl_kdtreequery.m
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_kdtreequery.m
+END
+vl_argparse.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_argparse.m
+END
+vl_alldist2.c
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_alldist2.c
+END
+vl_grad.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_grad.m
+END
+vl_histmarg.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_histmarg.m
+END
+vl_alldist2.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_alldist2.m
+END
+vl_override.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_override.m
+END
+vl_alldist.c
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_alldist.c
+END
+vl_ihashfind.c
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_ihashfind.c
+END
+vl_binsum.c
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_binsum.c
+END
+vl_kdtreebuild.c
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_kdtreebuild.c
+END
+vl_pegasos.c
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_pegasos.c
+END
+samplinthist.tc
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/samplinthist.tc
+END
+inthist.tc
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/inthist.tc
+END
+vl_ihashfind.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_ihashfind.m
+END
+vl_binsum.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_binsum.m
+END
+vl_kdtreebuild.m
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_kdtreebuild.m
+END
+vl_pegasos.m
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_pegasos.m
+END
+vl_getpid.c
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_getpid.c
+END
+vl_samplinthist.c
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_samplinthist.c
+END
+vl_simdctrl.c
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_simdctrl.c
+END
+vl_ihashsum.c
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_ihashsum.c
+END
+vl_inthist.c
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_inthist.c
+END
+kdtree.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/kdtree.h
+END
+vl_homkermap.c
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_homkermap.c
+END
+vl_version.c
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_version.c
+END
+vl_getpid.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_getpid.m
+END
+vl_numder2.m
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_numder2.m
+END
+vl_samplinthist.m
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/misc/vl_samplinthist.m
+END
