@@ -1,0 +1,182 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{mathtools}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{bbm}
+\usepackage{enumerate}
+
+\renewcommand{\labelenumi}{\alph{enumi}}
+\renewcommand{\theenumii}{\bullet}
+
+\title{HLCV ex 1}
+\date{May 2016}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{dsfont}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={160mm,257mm},
+ left=25mm,
+ top=20mm,
+ }
+ 
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+ 
+ 
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Moustafa Abouelenein, Damaris Gatzsche, Jakub Hajič\\*}
+\begin{document}
+
+\section*{Question 1}
+
+\subsection*{1c) Filter Combinations}
+\begin{enumerate}[(1)]
+    \item first G, then G': results in a 2D-Gaussian
+    $\rightarrow$ also shows that the 2D-kernel is separable
+    \item first G, then D': we get the y-derivative of the Gaussian-smoothed peak (since D is a row vector), so the y-derivative of the 2D-Gaussian
+    \item first D, then G': we get the x-derivative of the Gaussian-smoothed peak (since D is a row vector), so the x-derivative of the 2D-Gaussian
+    \item first G', then D: same as (3) (order of application does not matter)
+    \item first D', then G: same as (2) (order of application does not matter)
+\end{enumerate}
+
+\subsection*{1d) Gaussian Derivatives}
+We get the Gaussian x-derivative, the y-derivative and the squared norm of the Gaussian gradient. Logically, in the Gaussian x-derivative of the image, we can recognize contours in row-direction, and in the Gaussian y-derivative contours in column-direction. Due to the smoothing, there are no unnecessary little details visible. 
+With given $\sigma=6$, the edges are rather thick and smooth, so they are well recognizable, especially in the gradient norm image. But also, it is unnecessary to have such thick contours. Maybe, sharper edges would be more helpful.
+
+\newpage
+\section*{Question 3}
+
+\subsection*{3c) Comparisons} 
+
+\begin{table}[h!]
+\centering
+    \begin{tabular}{|c| c c c|}
+\hline
+\textbf{10 bins} & $\chi^2$ & intersect & Euclidean \\ [0.5ex] 
+\hline\hline
+grayvalue & 0.5169 & 0.4831 & 0.4382 \\
+dxdy & 0.4494 & 0.4157 & 0.3708 \\
+rg & 0.7753 & 0.7416 & 0.6517 \\
+rgb & \cellcolor[HTML]{B0D0B0} 0.8876 & 0.7865 & 0.6180 \\
+\hline
+\end{tabular}
+
+\vspace*{0.6 cm}
+
+\begin{tabular}{|c| c c c|} 
+\hline 
+\textbf{15 bins} & $\chi^2$ & intersect & Euclidean \\ [0.5ex] 
+\hline\hline
+grayvalue & 0.5618 & 0.4494 & 0.4157 \\
+dxdy & 0.5393 & 0.4270 & 0.3483 \\
+rg & \cellcolor[HTML]{B0D0B0} 0.9213 & 0.8539 & 0.7191 \\
+rgb & 0.8989 & 0.8652 & 0.6180 \\
+\hline
+\end{tabular}
+
+\vspace*{0.6 cm}
+
+\begin{tabular}{|c| c c c|} 
+\hline 
+\textbf{20 bins} & $\chi^2$ & intersect & Euclidean \\ [0.5ex] 
+\hline\hline
+grayvalue & 0.5281 & 0.5056 & 0.3708 \\
+dxdy & 0.6404 & 0.5843 & 0.4831 \\
+rg & \cellcolor[HTML]{B0D0B0} 0.9326 & 0.8989 & 0.7865 \\
+rgb & 0.8764 & 0.8876 & 0.5169 \\
+\hline
+\end{tabular}
+
+\vspace*{0.6 cm}
+
+\begin{tabular}{|c| c c c|} 
+\hline
+\textbf{30 bins} & $\chi^2$ & intersect & Euclidean \\ [0.5ex] 
+\hline\hline
+grayvalue & 0.5281 & 0.5056 & 0.4045 \\
+dxdy & 0.6517 & 0.5730 & 0.4831 \\
+rg & \cellcolor[HTML]{90D090} 0.9438 & 0.8989 & 0.7303 \\
+rgb & 0.8876 & 0.8989 & 0.4382 \\
+\hline
+\end{tabular}
+
+\vspace*{0.6 cm}
+
+\begin{tabular}{|c| c c c|} 
+\hline 
+\textbf{50 bins} & $\chi^2$ & intersect & Euclidean \\ [0.5ex] 
+\hline\hline
+grayvalue & 0.5506 & 0.5169 & 0.3371 \\
+dxdy & 0.6629 & 0.6292 & 0.5281 \\
+rg & \cellcolor[HTML]{B0D0B0} 0.9101 & 0.8876 & 0.6742 \\
+rgb & 0.8652 & 0.8876 & 0.3708 \\
+\hline
+\end{tabular}
+
+\vspace*{0.6 cm}
+
+\begin{tabular}{|c| c c c|} 
+\hline 
+\textbf{100 bins} & $\chi^2$ & intersect & Euclidean \\ [0.5ex] 
+\hline\hline
+grayvalue & 0.5056 & 0.4494 & 0.3034 \\
+dxdy & 0.6854 & 0.6854 & 0.4494 \\
+rg & \cellcolor[HTML]{B0D0B0} 0.9326 & 0.8989 & 0.5506 \\
+rgb & 0.6966 & 0.6854 & 0.2472 \\
+\hline
+\end{tabular}
+
+
+\caption{Table of recognition rates for various histograms, numbers of bins and distance measures. Best score for given number of bins highlighted}
+\end{table}
+
+From the above comparisons it seems the best performing histogram is 'rg', and the best distance measure is $\chi^2$. We achieved the overall best results with this combination and 30 bins. 
+
+We assume the comparatively worse performance achieved by 'dxdy' and 'grayvalue' is due to the fact that these histograms effectively discard information that may be relevant - namely hue \& saturation. Some images in the model set differ only by color, this will make it difficult for the hue \& saturation insensitive histograms to distinguish these.
+
+As for the difference between 'rg' and 'rgb', we first note the performance of both is notably better than the 'dxdy' and 'grayvalue'. We attribute the slightly worse performance of 'rgb' to the curse of dimensionality, which is especially prominent at 100 bins - with Euclidean distance and 100 bins, 'rgb' is the worst performing combination among all of those tested.
+
+
+\newpage
+\section*{Question 4}
+
+In the figures below, we observe the following:
+\begin{itemize}
+    \item There is an obvious performance difference between the histograms that use hue \& saturation and those that don't. This agrees with what we observed from recognition rate only.
+
+    \item RGB histograms have better precision than RG at low recall thresholds, but when high recall is required RG histograms have better precision than RGB.
+    
+    \item The L2 norm is not suitable for high-dimensional vectors. $\chi^2$ and intersect seem to perform reasonably even for high dimensional spaces. Some performance degradation can be observed at 100 bins for the RGB histograms - these are vectors in $100^3 = 10^6$-dimensional space, which already suffers heavily from the curse of dimensionality.
+\end{itemize}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{rpc_10bins}
+\caption{RPC curves for 10 bins}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{rpc_30bins}
+\caption{RPC curves for 30 bins}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{rpc_100bins}
+\caption{RPC curves for 100 bins}
+\end{figure}
+
+\end{document}
