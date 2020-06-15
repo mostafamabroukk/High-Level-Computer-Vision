@@ -1,0 +1,15 @@
+# The database 4GB! #
+################
+data/train/c0
+data/train/c1
+data/train/c2
+data/train/c3
+data/train/c4
+data/train/c5
+data/train/c6
+data/train/c7
+data/train/c8
+data/train/c9
+data/test
+
+code/denoising/testresults

@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo
+END
+vl_demo_print.m
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo/vl_demo_print.m
+END
+vl_demo_alldist.m
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo/vl_demo_alldist.m
+END
+vl_demo_kdtree_forest.m
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo/vl_demo_kdtree_forest.m
+END
+vl_demo_kmeans_init.m
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo/vl_demo_kmeans_init.m
+END
+vl_demo_cmd.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo/vl_demo_cmd.m
+END
+vl_demo_kdtree_sift.m
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo/vl_demo_kdtree_sift.m
+END
+vl_demo_sift_peak.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo/vl_demo_sift_peak.m
+END
+vl_demo_sift_or.m
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo/vl_demo_sift_or.m
+END
+vl_demo_sift_vs_ubc.m
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo/vl_demo_sift_vs_ubc.m
+END
+vl_demo_sift_basic.m
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo/vl_demo_sift_basic.m
+END
+vl_demo_mser_basic.m
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo/vl_demo_mser_basic.m
+END
+vl_demo_dsift.m
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo/vl_demo_dsift.m
+END
+vl_demo_quickshift.m
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo/vl_demo_quickshift.m
+END
+vl_demo_kdtree_ann.m
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo/vl_demo_kdtree_ann.m
+END
+vl_demo_kmeans_vs_builtin.m
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo/vl_demo_kmeans_vs_builtin.m
+END
+vl_demo_kdtree_plot.m
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo/vl_demo_kdtree_plot.m
+END
+vl_demo_kdtree.m
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo/vl_demo_kdtree.m
+END
+vl_demo_mser_delta.m
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo/vl_demo_mser_delta.m
+END
+vl_demo_sift_match.m
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo/vl_demo_sift_match.m
+END
+vl_demo_imdisttf.m
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo/vl_demo_imdisttf.m
+END
+vl_demo_kdtree_self.m
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo/vl_demo_kdtree_self.m
+END
+vl_demo_sift_cmd.m
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo/vl_demo_sift_cmd.m
+END
+vl_demo_sift_edge.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo/vl_demo_sift_edge.m
+END
+vl_demo_mser_cmd.m
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo/vl_demo_mser_cmd.m
+END
+vl_demo_aib.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/D2/hlcv14/!svn/ver/2/Exercise/Extra/Ex_ism/exercise6/vlfeat-0.9.9/toolbox/demo/vl_demo_aib.m
+END

@@ -1,0 +1,32 @@
+Organisatorial Guideline
+
+
+1. Finish methods and put them together with test script in the git.
+2. Fiddle around with parameters.
+3. Compare the results.
+
+
+Collect data - Done until June 27th
+- collect ourselfes
+	For Data Augmentation:
+		- drivers at night: get a infrared camera (ask Majid)
+		
+	Two timeslots (day and night): Monday, June 27th, 12-16
+		- ask for a car: Thomas
+		- get a infrared camera (ask Majid): Jakub
+		- action cam from Thomas
+		- location: Wildpark, coordinates 49°15'08.2"N 7°01'54.3"E
+		- slot assignment: 
+		
+Data Augmentation:
+- illumination changes
+- histogram specifications
+- different transformations (mirroring, translation, rotation...) 
+	- only meaningful ones! (little croppings, steering wheel on right side...)
+
+Draw Bounding Boxes - until 22nd June
+
+Try with CNN
+
+Try with SIFT, HOG...
+- use Code from Ex4
